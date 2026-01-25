@@ -1,70 +1,21 @@
+<!doctype html>
+<html lang="es">
 
-<!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
-  <head>
+<head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MODEL SxL | Bots Empáticos Omnicanal</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>MODEL SxL | Conversaciones que Convierten</title>
+    <meta name="description"
+        content="Bot empático omnicanal diseñado a medida para empresas premium. Mejora tu facturación y fidelización con MODEL SxL.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              outfit: ['Outfit', 'sans-serif'],
-            },
-            colors: {
-              'brand-black': '#0a0a0a',
-              'brand-black-light': '#1a1a1a',
-              'brand-gold': '#d4af37',
-              'brand-gold-bright': '#f4d03f',
-            },
-            backgroundImage: {
-              'gold-gradient': 'linear-gradient(135deg, #d4af37 0%, #f4d03f 100%)',
-            },
-            animation: {
-              'float': 'float 8s ease-in-out infinite',
-              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-            },
-            keyframes: {
-              float: {
-                '0%, 100%': { transform: 'translateY(0px)' },
-                '50%': { transform: 'translateY(-20px)' },
-              }
-            }
-          }
-        }
-      }
-    </script>
-    <style>
-      body {
-        background-color: #0a0a0a;
-        color: #ffffff;
-      }
-      .glow-effect {
-        background: radial-gradient(circle, rgba(212,175,55,0.1) 0%, transparent 70%);
-      }
-      .text-gradient {
-        background: linear-gradient(135deg, #ffffff 0%, #d4af37 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-    </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3",
-    "lucide-react": "https://esm.sh/lucide-react@^0.563.0"
-  }
-}
-</script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-  <body class="font-outfit antialiased">
+
+<body>
     <div id="root"></div>
-  </body>
+    <script type="module" src="/src/main.tsx"></script>
+</body>
+
 </html>

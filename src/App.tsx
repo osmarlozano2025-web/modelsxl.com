@@ -688,10 +688,6 @@ function App() {
             </main>
             <Footer />
 
-            {/* Floating Chat Widget Mockup */}
-            <div className="floating-chat glass">
-                <MessageSquare size={24} />
-            </div>
         </div>
     );
 }

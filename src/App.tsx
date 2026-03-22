@@ -669,6 +669,45 @@ const Footer = () => (
     </footer>
 );
 
+const WebChat = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    return (
+        <>
+            <AnimatePresence>
+                {isOpen && (
+                    <motion.div
+                        className="chat-iframe-container"
+                        initial={{ opacity: 0, y: 20, scale: 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: 20, scale: 0.95 }}
+                        transition={{ duration: 0.2 }}
+                    >
+                        <div className="chat-iframe-header">
+                            <span>Chat con Nosotros</span>
+                            <button onClick={() => setIsOpen(false)}>
+                                <X size={20} />
+                            </button>
+                        </div>
+                        <iframe 
+                            src="https://ap.whapify.ai/webchat/?p=1081948&ref=1761776914607"
+                            style={{ width: '100%', height: 'calc(100% - 50px)', border: 'none' }}
+                            title="Webchat"
+                            allow="microphone"
+                        />
+                    </motion.div>
+                )}
+            </AnimatePresence>
+            <button
+                className="floating-chat glass"
+                onClick={() => setIsOpen(!isOpen)}
+            >
+                {isOpen ? <X size={28} /> : <MessageSquare size={28} />}
+            </button>
+        </>
+    );
+};
+
 function App() {
     return (
         <div className="app-wrapper">
@@ -687,7 +726,7 @@ function App() {
                 <Contact />
             </main>
             <Footer />
-
+            <WebChat />
         </div>
     );
 }

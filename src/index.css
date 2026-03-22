@@ -1038,6 +1038,13 @@ section {
     color: #ffffff;
 }
 
+
+.ml-1 { margin-left: 10px; }
+.mb-2 { margin-bottom: 20px; }
+.mb-4 { margin-bottom: 40px; }
+.mt-1 { margin-top: 10px; }
+.mt-4 { margin-top: 40px; }
+
 .floating-chat {
     position: fixed;
     bottom: 30px;
@@ -1049,20 +1056,55 @@ section {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    z-index: 1000;
-    background: var(--brand-vibrant) !important;
+    z-index: 10000;
+    background: #006dff !important;
     color: #ffffff;
     border: none;
-    box-shadow: 0 10px 30px rgba(37,99,235,0.4);
+    box-shadow: 0 10px 30px rgba(0, 109, 255, 0.4);
     transition: var(--transition-smooth);
 }
 .floating-chat:hover {
     transform: translateY(-4px);
-    box-shadow: 0 15px 35px rgba(37,99,235,0.5);
+    box-shadow: 0 15px 35px rgba(0, 109, 255, 0.5);
 }
 
-.ml-1 { margin-left: 10px; }
-.mb-2 { margin-bottom: 20px; }
-.mb-4 { margin-bottom: 40px; }
-.mt-1 { margin-top: 10px; }
-.mt-4 { margin-top: 40px; }
+.chat-iframe-container {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    width: 380px;
+    height: 600px;
+    max-width: calc(100vw - 60px);
+    max-height: calc(100vh - 140px);
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+    overflow: hidden;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+}
+.chat-iframe-header {
+    background-color: #006dff;
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    padding: 14px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.chat-iframe-header button {
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+.chat-iframe-header button:hover {
+    opacity: 1;
+}
